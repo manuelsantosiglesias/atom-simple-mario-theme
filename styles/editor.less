@@ -1,0 +1,67 @@
+
+// Mini Editor
+// -------------------
+
+// Mini Editors are the "text inputs" used in find+replace or in the settings.
+
+
+atom-text-editor[mini] {
+  padding-left: @component-padding/2;
+  color: @text-color;
+  border-radius: @component-border-radius;
+  background-color: @input-background-color;
+
+  &.is-focused {
+    background-color: darken(@input-background-color, 5%);
+  }
+
+  &, // <-- Deprecated. The `&,` can be removed once the Shadow DOM can't be turned off in the settings.
+  &::shadow {
+    .placeholder-text {
+      color: @text-color-subtle;
+    }
+    .selection .region {
+      background-color: @background-color-selected;
+    }
+  }
+}
+
+
+// EDITOR
+
+atom-text-editor, :host {
+  background: ##0e0e0e;
+  background:url(https://user-images.githubusercontent.com/29311335/26998727-916d5be6-4d88-11e7-84c2-c707ba2c9a37.jpg);
+  background-size: cover;
+
+  color: @text-color;
+
+  .indent-guide {
+    color: @tab-border-color;
+  }
+  .gutter {
+    background-color: @line-number-bg;
+    color: @text-color-highlight;
+  }
+
+  // Marcador de línea
+  .line-number {
+    &.cursor-line {
+      background-color: @text-color-subtle;
+      color: @text-color-selected;
+
+    }
+
+    &.cursor-line-no-selection {
+      color: @text-color-highlight;
+    }
+  }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    color: @text-color-success;
+  }
+
+  // FALTAN COLORES PARA SEARCH RESULTS
+}

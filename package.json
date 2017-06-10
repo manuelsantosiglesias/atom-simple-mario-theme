@@ -1,0 +1,17 @@
+{
+  "name": "atom-simple-mario-theme",
+  "theme": "ui",
+  "version": "0.0.1",
+  "description": "A dark Mario theme",
+  "keywords": [
+    "ui",
+    "theme",
+    "mario",
+    "dark"
+  ],
+  "repository": "https://github.com/manuelsantosiglesias/atom-simple-mario-theme",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}

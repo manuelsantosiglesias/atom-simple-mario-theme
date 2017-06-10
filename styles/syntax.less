@@ -1,0 +1,96 @@
+// Syntax
+// -------------------
+
+// Used for syntax related
+// Or to override certain Atom core styles
+
+// -------------------
+
+.syntax--comment{
+  color: @text-color-subtle;
+  font-style: italic;
+  text-shadow: 1px 1px 1px @ui-site-color-1, 1px 1px 1px @ui-site-color-2;
+}
+
+.syntax--variable {
+  font-style: italic;
+}
+
+.syntax--string {
+  color: @ui-site-color-4;
+}
+
+.syntax--keyword{
+  color: @ui-site-color-1;
+}
+
+.syntax--source{
+  .syntax--entity{
+    &.syntax--other{
+      &.syntax--attribute-name{
+      color: @text-color;
+      animation: glowred 2.5s ease-in-out infinite alternate;
+      }
+      &.syntax--attribute-name:hover{
+        color: @text-color;
+        animation: glowgreen 1s ease-in-out infinite alternate;
+      }
+    }
+  }
+}
+
+.syntax--support{
+  &.syntax--type{
+    &.syntax--property-name{
+      &.syntax--css{
+        color: @text-color;
+        animation: glowblue 2s ease-in-out infinite alternate;
+      }
+      &.syntax--css:hover{
+        color: @text-color;
+        animation: glowgreen 1s ease-in-out infinite alternate;
+      }
+    }
+  }
+}
+
+.syntax--meta{
+  &.syntax--property-value{
+    .syntax--support{
+      &.syntax--constant{
+        &.syntax--property-value{
+          &.syntax--css{
+            color: @ui-site-color-6;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes glowblue {
+  from {
+    text-shadow: 0 0 1px @text-color-info, 0 0 2px @text-color-info, 0 0 4px @text-color-info, 0 0 8px @text-color-info, 0 0 10px @text-color-info;
+  }
+  to {
+    text-shadow: 0 0 1px @text-color-info, 0 0 2px @text-color-info, 0 0 8px @background-color-info, 0 0 10px @background-color-info, 0 0 12px @background-color-info;
+  }
+}
+
+@keyframes glowred {
+  from {
+    text-shadow: 0 0 1px @text-color-error, 0 0 2px @text-color-error, 0 0 8px @text-color-error, 0 0 10px @text-color-error, 0 0 12px @text-color-error;
+  }
+  to {
+    text-shadow: 0 0 1px @text-color-error, 0 0 2px @text-color-error, 0 0 8px @background-color-error, 0 0 10px @background-color-error, 0 0 12px @background-color-error;
+  }
+}
+
+@keyframes glowgreen{
+  from {
+    text-shadow: 0 0 1px @ui-site-color-2, 0 0 2px @ui-site-color-2, 0 0 4px @ui-site-color-2, 0 0 8px @ui-site-color-2, 0 0 10px @ui-site-color-2;
+  }
+  to {
+    text-shadow: 0 0 1px @ui-site-color-2, 0 0 2px @ui-site-color-2, 0 0 8px @ui-site-color-8, 0 0 10px @ui-site-color-8, 0 0 12px @ui-site-color-8;
+  }
+}

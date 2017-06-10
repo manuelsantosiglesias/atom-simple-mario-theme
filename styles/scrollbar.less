@@ -1,0 +1,35 @@
+// Scrollbar styles
+
+.scrollbars-visible-always {
+  /deep/ ::-webkit-scrollbar {
+    width: auto;
+    height: auto;
+
+    &-track {
+      border: 0px;
+      border-radius: 0px;
+      background-color: transparent !important;
+    }
+
+    &-corner {
+      background-color: rgba(0, 0, 0, 1) !important;
+      border: 0px;
+      border-radius: 0px;
+    }
+
+    &-thumb {
+      background-color: rgba(50, 50, 50, 0.9) !important;
+      border: 0px;
+      border-radius: 0px;
+      &:window-inactive {
+        background-color: rgba(10, 10, 10, 0.2) !important;
+      }
+    }
+
+  }
+}
+
+// File explorer scrollbar
+.tool-panel, .panel, atom-panel {
+    background-color: #060606 !important;
+}
