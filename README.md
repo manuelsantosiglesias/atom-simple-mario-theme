@@ -1,5 +1,3 @@
-# atom-simple-mario-theme
-
 # Atom UI Theme Template
 
 A simple mario theme for atom
